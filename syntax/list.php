@@ -242,7 +242,7 @@ class syntax_plugin_datatemplate_list extends syntax_plugin_data_table {
                           '#<!-- SECTION \[(\d*-\d*)\] -->#e',
                           '!<div class="category">.*?</div>!s');
         $replace  = array('','','');
-        $text = preg_replace($patterns,$replace,$text);
+        #$text = preg_replace($patterns,$replace,$text);
         // Do remaining replacements
         foreach($replacers['vals_id'] as $num => $vals) {
             $text = str_replace($replacers['keys_id'][$num], $vals, $text);
